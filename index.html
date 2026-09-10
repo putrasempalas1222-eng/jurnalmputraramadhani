@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Daftar jurnal M Putra Ramadhani" />
+    <title>Daftar Jurnal | M Putra Ramadhani</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="https://mputraramadhani.id" aria-label="Kembali ke situs M Putra Ramadhani">
+          <span class="brand-mark">MR</span>
+          <span><strong>M Putra Ramadhani</strong><small>AI Indonesia</small></span>
+        </a>
+        <a class="back-link" href="https://mputraramadhani.id">Kembali ke situs utama</a>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">Rujukan yang dikurasi</p>
+        <h1 id="page-title">Daftar Jurnal</h1>
+        <p class="intro-copy">Kumpulan artikel dan publikasi pilihan untuk riset, penulisan, dan pengembangan ide akademik.</p>
+      </section>
+
+      <section class="journal-workspace" aria-label="Katalog jurnal">
+        <div class="catalog-heading">
+          <div><p class="section-label">Katalog</p><h2>Telusuri rujukan</h2></div>
+          <p class="catalog-note">Daftar ini dikelola dari kode situs. Pengunjung hanya dapat mencari dan membuka sumber jurnal.</p>
+        </div>
+        <div class="toolbar">
+          <label class="search-field" for="journal-search">
+            <span>Cari judul, penulis, atau penerbit</span>
+            <input id="journal-search" type="search" autocomplete="off" placeholder="Cari dalam daftar jurnal" />
+          </label>
+          <label class="select-field" for="journal-category-filter">
+            <span>Bidang</span>
+            <select id="journal-category-filter"><option value="all">Semua bidang</option></select>
+          </label>
+        </div>
+        <div class="list-meta" aria-live="polite">
+          <span id="journal-count">0 jurnal tersedia</span>
+          <button id="clear-filters" class="text-action" type="button" hidden>Hapus pencarian</button>
+        </div>
+        <div id="journal-list" class="journal-list" aria-live="polite"></div>
+        <section id="empty-state" class="empty-state" hidden>
+          <p class="empty-kicker">Belum ada hasil</p>
+          <h2 id="empty-title">Jurnal yang kamu cari belum tersedia.</h2>
+          <p id="empty-copy">Gunakan kata kunci lain atau hapus penyaringan untuk melihat seluruh katalog.</p>
+          <button id="empty-clear-filters" class="text-action prominent" type="button">Lihat seluruh jurnal</button>
+        </section>
+      </section>
+    </main>
+    <template id="journal-item-template">
+      <article class="journal-item">
+        <div class="journal-order" aria-hidden="true"></div>
+        <div class="journal-content">
+          <div class="journal-heading"><div><p class="journal-category"></p><h2 class="journal-title"></h2></div><span class="journal-year"></span></div>
+          <p class="journal-source"></p><p class="journal-note"></p>
+          <dl class="journal-details">
+            <div><dt>DOI</dt><dd class="journal-doi"></dd></div>
+            <div><dt>Terbit</dt><dd class="journal-published"></dd></div>
+            <div><dt>Terindeks</dt><dd class="journal-indexed"></dd></div>
+            <div><dt>Lisensi</dt><dd class="journal-license"></dd></div>
+          </dl>
+          <div class="journal-actions"><a class="journal-link" target="_blank" rel="noopener noreferrer">Buka halaman jurnal</a><a class="doi-link" target="_blank" rel="noopener noreferrer">Buka DOI</a></div>
+        </div>
+      </article>
+    </template>
+    <script src="app.js"></script>
+  </body>
+</html>
