@@ -49,14 +49,9 @@ button { cursor: pointer; }
 .brand-mark {
   width: 36px;
   height: 36px;
-  display: grid;
-  place-items: center;
+  display: block;
   border-radius: var(--radius-small);
-  background: #b85d39;
-  color: #fff7e9;
-  font-family: Arial, sans-serif;
-  font-weight: 800;
-  letter-spacing: -1px;
+  object-fit: cover;
 }
 .brand strong, .brand small { display: block; }
 .brand strong { font-size: 15px; }
